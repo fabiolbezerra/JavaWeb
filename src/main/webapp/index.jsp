@@ -12,5 +12,6 @@
     <a href="hello-servlet">Hello World Servlet</a> <br/>
     <a href="ServletOlaMundo">Olá Mundo Servlet</a> <br/>
     <a href="olamundo?nome=Fabio">Olá Mundo Servlet</a> <br/>
+    <a href="parametros-inicializacao">Parâmetros de Inicialização</a> <br/>
 </body>
 </html>
