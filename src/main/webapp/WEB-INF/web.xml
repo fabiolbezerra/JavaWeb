@@ -24,6 +24,10 @@
             <param-value>Fábio Bezerra</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>ServletParametros</servlet-name>
+        <servlet-class>br.edu.ufra.javaweb.ServletParametros</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>OlaMundo</servlet-name>
@@ -36,5 +40,9 @@
     <servlet-mapping>
         <servlet-name>ServletParametrosInicializacao</servlet-name>
         <url-pattern>/parametros-inicializacao</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletParametros</servlet-name>
+        <url-pattern>/parametros</url-pattern>
     </servlet-mapping>
 </web-app>
