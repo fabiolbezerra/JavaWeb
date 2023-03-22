@@ -18,7 +18,7 @@
     </servlet>
     <servlet>
         <servlet-name>ServletParametrosInicializacao</servlet-name>
-        <servlet-class>br.edu.ufra.javaweb.ServletParametrosInicializacao</servlet-class>
+        <servlet-class>br.edu.ufra.javaweb.requisicao.ServletParametrosInicializacao</servlet-class>
         <init-param>
             <param-name>professor</param-name>
             <param-value>Fábio Bezerra</param-value>
@@ -26,7 +26,7 @@
     </servlet>
     <servlet>
         <servlet-name>ServletParametros</servlet-name>
-        <servlet-class>br.edu.ufra.javaweb.ServletParametros</servlet-class>
+        <servlet-class>br.edu.ufra.javaweb.requisicao.ServletParametros</servlet-class>
     </servlet>
 
     <servlet-mapping>

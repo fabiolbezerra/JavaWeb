@@ -1,4 +1,4 @@
-package br.edu.ufra.javaweb;
+package br.edu.ufra.javaweb.requisicao;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
