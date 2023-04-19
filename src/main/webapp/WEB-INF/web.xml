@@ -28,6 +28,10 @@
         <servlet-name>ServletParametros</servlet-name>
         <servlet-class>br.edu.ufra.javaweb.requisicao.ServletParametros</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletUltimoAcesso</servlet-name>
+        <servlet-class>br.edu.ufra.javaweb.sessao.ServletUltimoAcesso</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>OlaMundo</servlet-name>
@@ -44,5 +48,9 @@
     <servlet-mapping>
         <servlet-name>ServletParametros</servlet-name>
         <url-pattern>/parametros</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletUltimoAcesso</servlet-name>
+        <url-pattern>/ultimo-acesso</url-pattern>
     </servlet-mapping>
 </web-app>

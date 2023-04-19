@@ -23,5 +23,7 @@
     <a href="requisicao/ola-mundo-elaborado.html">Olá Mundo Elaborado</a> <br/>
     <a href="requisicao/calculadora.html">Calculadora</a> <br/>
 
+    <h2>Exemplos de sessão</h2>
+    <a href="ultimo-acesso">Último Acesso</a> <br/>
 </body>
 </html>
