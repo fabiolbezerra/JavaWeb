@@ -28,6 +28,7 @@
     <a href="visitas">Número de Visitas - Cookies</a> <br/>
 
     <h2>Exemplo com BD MySQL</h2>
-    <a href="ServletListarEstados">Listar estados</a> <br/>
+    <a href="banco/estado.jsp">Cadastrar estado</a> <br/>
+    <a href="ServletListarEstados">Listar estados cadastrados</a> <br/>
 </body>
 </html>

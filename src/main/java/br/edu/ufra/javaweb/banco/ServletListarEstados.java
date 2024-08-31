@@ -29,7 +29,7 @@ public class ServletListarEstados extends HttpServlet {
             System.out.println("Conectando com o MySQL ...");
             //Class.forName("com.mysql.jdbc.Driver"); //MySQL 5
             Class.forName("com.mysql.cj.jdbc.Driver"); //MySQL 8
-            String url = "jdbc:mysql://localhost:3306/aula_bd";
+            String url = "jdbc:mysql://localhost:3306/aula_db";
 
             mydb = DriverManager.getConnection(url, "root", "root");
 

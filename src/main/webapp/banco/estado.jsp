@@ -4,15 +4,21 @@
     <title>Cadastro de Estado</title>
 </head>
 <body>
-    <h1>Cadastro de Estado</h1>
-    <form action="" method="POST">
-        <fieldset>
-            ID: <input type="text" id="id" readonly="true" value="<%= request.getAttribute("id") %>"> <br>
-            NOME: <input type="text" id="nome" value="<%= request.getAttribute("nome") %>"> <br>
-            SIGLA: <input type="text" id="sigla" value="<%= request.getAttribute("sigla") %>"> <br>
-        </fieldset>
-        <button id="btbSalvar" type="submit" value="Salvar" />
-        <button id="btbCancelar" type="submit" value="Cancelar" />
-    </form>
+<h1>Cadastro de Estado</h1>
+<form action="/JavaWeb/ServletSalvarEstado" method="POST">
+    <fieldset>
+        ID: <input type="text" name="id" readonly="true"
+                   value="<%= request.getAttribute("id") == null ? "0" : request.getAttribute("id") %>"> <br>
+        NOME: <input type="text" name="nome"
+                     value="<%= request.getAttribute("nome") == null ? "" : request.getAttribute("nome") %>"> <br>
+        SIGLA: <input type="text" name="sigla"
+                      value="<%= request.getAttribute("sigla") == null ? "" : request.getAttribute("sigla") %>"
+                      size="2"> <br>
+    </fieldset>
+    <fieldset>
+        <input name="btnSalvar" type="submit" value="Salvar"/>
+        <input name="btnCancelar" type="submit" value="Cancelar"/>
+    </fieldset>
+</form>
 </body>
 </html>
