@@ -32,6 +32,10 @@
         <servlet-name>ServletUltimoAcesso</servlet-name>
         <servlet-class>br.edu.ufra.javaweb.sessao.ServletUltimoAcesso</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletCookies</servlet-name>
+        <servlet-class>br.edu.ufra.javaweb.sessao.ServletCookies</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>OlaMundo</servlet-name>
@@ -52,5 +56,9 @@
     <servlet-mapping>
         <servlet-name>ServletUltimoAcesso</servlet-name>
         <url-pattern>/ultimo-acesso</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletCookies</servlet-name>
+        <url-pattern>/visitas</url-pattern>
     </servlet-mapping>
 </web-app>

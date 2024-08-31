@@ -25,5 +25,9 @@
 
     <h2>Exemplos de sessão</h2>
     <a href="ultimo-acesso">Último Acesso</a> <br/>
+    <a href="visitas">Número de Visitas - Cookies</a> <br/>
+
+    <h2>Exemplo com BD MySQL</h2>
+    <a href="ServletListarEstados">Listar estados</a> <br/>
 </body>
 </html>
