@@ -26,47 +26,30 @@ public class ServletSalvarEstado extends HttpServlet {
     private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         String btnSalvar = request.getParameter("btnSalvar");
-        System.out.println(btnSalvar);
         String btnCancelar = request.getParameter("btnCancelar");
-        System.out.println(btnCancelar);
-        String resultado = "/";
+        String resultado = "/JavaWeb";
         if (btnSalvar != null) {
-            resultado = "/ServletListarEstados";
+            resultado += "/ServletListarEstados";
             //Lendo parâmetros de entrada
+            Integer id = Integer.parseInt(request.getParameter("id"));
             String nome = request.getParameter("nome");
             String sigla = request.getParameter("sigla");
             //Realizando o processamento
-            Connection mydb = null;
             try {
-                System.out.println("Conectando com o MySQL ...");
-                //Class.forName("com.mysql.jdbc.Driver"); //MySQL 5
-                Class.forName("com.mysql.cj.jdbc.Driver"); //MySQL 8
-                String url = "jdbc:mysql://localhost:3306/aula_db";
-
-                mydb = DriverManager.getConnection(url, "root", "root");
-
-                PreparedStatement ps = mydb.prepareStatement("insert into estado (nome, sigla) values (?, ?)");
-                ps.setString(1, nome);
-                ps.setString(2, sigla);
-                int linhasAfetadas = ps.executeUpdate();
-                System.out.println("Linhas afetadas: " + linhasAfetadas);
+                BancoDeDados bancoDeDados = new BancoDeDados();
+                if (id > 0) {
+                    bancoDeDados.alterarEstado(id, nome, sigla);
+                } else {
+                    bancoDeDados.inserirEstado(nome, sigla);
+                }
             } catch (Exception e) {
                 System.out.println("Erro: " + e);
                 request.setAttribute("erro", ("Erro: " + e));
-            } finally {
-                try {
-                    if (mydb != null && !mydb.isClosed()) {
-                        mydb.close();
-                    }
-                } catch (Exception e2) {
-                    System.out.println(e2);
-                }
             }
-        } else {
-            resultado = "/index.jsp";
+        } else if (btnCancelar != null) {
+            resultado += "/index.jsp";
         }
-        RequestDispatcher rd = request.getRequestDispatcher(resultado);
-        rd.forward(request, response);
+        response.sendRedirect(resultado);
     }
 
 

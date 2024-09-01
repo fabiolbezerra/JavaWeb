@@ -8,11 +8,11 @@
 <form action="/JavaWeb/ServletSalvarEstado" method="POST">
     <fieldset>
         ID: <input type="text" name="id" readonly="true"
-                   value="<%= request.getAttribute("id") == null ? "0" : request.getAttribute("id") %>"> <br>
+                   value="<%= request.getParameter("id") == null ? "0" : request.getParameter("id") %>"> <br>
         NOME: <input type="text" name="nome"
-                     value="<%= request.getAttribute("nome") == null ? "" : request.getAttribute("nome") %>"> <br>
+                     value="<%= request.getParameter("nome") == null ? "" : request.getParameter("nome") %>"> <br>
         SIGLA: <input type="text" name="sigla"
-                      value="<%= request.getAttribute("sigla") == null ? "" : request.getAttribute("sigla") %>"
+                      value="<%= request.getParameter("sigla") == null ? "" : request.getParameter("sigla") %>"
                       size="2"> <br>
     </fieldset>
     <fieldset>

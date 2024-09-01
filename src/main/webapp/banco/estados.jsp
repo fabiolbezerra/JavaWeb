@@ -12,14 +12,32 @@
         out.print("<h2>Erro</h2>");
         out.print("<h3 style='color: red'>" + erro + "</h3>");
     } else {
-        List estados = (List) request.getAttribute("estados");
-        for (Object estado :
+        String id = "";
+        String nome = "";
+        String sigla = "";
+        String parametros = null;
+        List<String> estados = (List<String>) request.getAttribute("estados");
+        for (String estado :
                 estados) {
+            parametros = "";
+            //Extraindo os dados
+            id = estado.split(",")[0].trim();
+            parametros += "id=" + id + "&";
+            nome = estado.split(",")[1].trim();
+            parametros += "nome=" + nome + "&";
+            sigla = estado.split(",")[2].trim();
+            parametros += "sigla=" + sigla;
+            //Imprimindo as linhas
+            out.print("<a href='/JavaWeb/banco/estado.jsp?" + parametros + "'>");
             out.print(estado);
+            out.print("</a> --- ");
+            out.print("<a href='/JavaWeb/ServletExcluirEstado?id=" + id + "'>Excluir</a>");
             out.println("<br>");
         }
     }
 %>
-
+<br>
+<br>
+<a href="/JavaWeb/index.jsp">Início</a>
 </body>
 </html>
