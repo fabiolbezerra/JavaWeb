@@ -30,3 +30,20 @@ Para esse exemplo, considerar:
   * Caso já tenha instalado MySQL 5, usar driver 'com.mysql.jdbc.Driver'
 * Criar banco de dados 'javaweb'
 * Criar tabela 'estado'
+
+### Caso deseje utilizar Docker
+
+> docker network create mysql8.0-net
+> docker run -d --name mysql8.0 --network mysql8.0-net --network-alias mysql8.0-net-alias -v mysql8.0-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=javaweb -p 3306:3306 mysql:8.0
+> docker exec -it --name mysql8.0 mysql -u root -p
+
+No console do MySQL, criar a tabela estado.
+
+```
+use javaweb;
+create table estado (
+  id integer not null primary key auto_increment,
+  nome varchar(50) not null,
+  sigla char(2) not null
+  );
+```
