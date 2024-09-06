@@ -26,6 +26,7 @@
     <h2>Exemplos de sessão</h2>
     <a href="ultimo-acesso">Último Acesso</a> <br/>
     <a href="visitas">Número de Visitas - Cookies</a> <br/>
+    <a href="inscricao/pagina01.jsp">Formulário de inscrição</a> <br/>
 
     <h2>Exemplo com BD MySQL</h2>
     <a href="banco/estado.jsp">Cadastrar estado</a> <br/>
